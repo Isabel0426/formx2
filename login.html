@@ -8,30 +8,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
     <title>Formulario</title>
 </head>
-<body>
+
+<body style="background-color: rgba(86, 77, 110, 0.418);">
     <div class="container my-5">
         <dov class="row justify-content-center">
             <div class="col-5">
-                <form onSubmit="validar_login();" name="formLogin">
+
+                <form  id="form" action="">
 
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                        <input id="email" type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" id="usuario">
+                        <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" id="usuario" for="usuario">
                     </div>
-
+                    
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
-                        <input id="password" type="Password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" id="password">
+                        <input id="contraseña" type="Password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" for="contraseña">
                     </div>
 
-                    <button id="boton" type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    <button id="boton_login" type="submit" class="btn btn-primary w-100" value="Ingresar">Ingresar</button>
               
                 </form>
 
             </div>
-        </dov>
+        </div>
     </div>
     <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

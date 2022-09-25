@@ -1,25 +1,33 @@
 const users = [
-    {user1:"user",passw:"1234"}
+    {user:"user", password:"1234"}
 ];
-document.write
-function validar_login(){
-    var user=document.getElementById("usuario").value;
-    var pass=document.getElementById("password").value;
+console.log(users)
 
+ 
+function validarlogin(evento){
+    evento.preventDefault()  
+
+    let usuario=document.getElementById("usuario").value;
+    let contraseña=document.getElementById("contraseña").value;
+    
     for (let i = 0; i < users.length; i++) {
-        if(user=="" || pass==""){
-            alert("Por favor Ingrese los datos");
-            return;
+   
+        if(usuario.value==0 && contraseña.value==0){
+            alert ("Por favor Ingrese los datos");
+            return false;
         }else{
-            if (usuario==users[i].user1 && contraseña==users[i].passw) {
-                alert("Bienvenido user");
-                return;
-            }
+            if (usuario==users[i].user && contraseña==users[i].password) {
+                alert("Bienvenido" + users[i].user);
+                return false;
+                 }
+             }
         }
-    }
-    alert(" Usuario No Registrado");
-    return;
-}
+        alert("Usuario y/o contraseña invalidos o Usuario No Registrado");
+        return true;
+        }
+    const boton_login = document.getElementById("boton_login")
+    boton_login.addEventListener( "click", validarlogin)
+
 //mostrar: 
 //[0]
 
